@@ -1,11 +1,15 @@
 import React from 'react'
 
+import Table from '../components/Table.js'
+
 import '../css/app.css'
 
 function App() {
 
   return (
-    <div className="app">Here is my App!</div>
+    <div className="app">
+      <Table />
+    </div>
   );
 }
 

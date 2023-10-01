@@ -1,2 +1,2 @@
 # parte-de-horas
-al hacer algo bien fácil para levantar mi moral...hace tanto tiempo...lágrimas...
+  - https://dirask.com/posts/React-editable-table-cell-after-mouse-click-DWeBEj
