@@ -4,8 +4,8 @@ import Cell from './Cell.js'
 
 const Table = () => {
 
-    const [values, setValues] = useState(['Text 1', 'Text 2', 'Text 3']);
-    console.log(...values);
+    const [values, setValues] = useState(['1', '2', '3', '4', '5', '6']);
+    // console.log(...values);
     return (
         <table style={{ width: '250px' }}>
             <tbody>

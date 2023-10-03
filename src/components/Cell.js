@@ -5,7 +5,8 @@ const itemStyle = {
     border: '1px solid silver',
     fontFamily: 'Arial',
     fontSize: '13px',
-    display: 'flex'
+    display: 'flex',
+    backgroundColor: 'slategrey'
 };
 
 const textStyle = {
@@ -17,7 +18,9 @@ const inputStyle = {
     padding: '0',
     flex: '1',
     fontFamily: 'Arial',
-    fontSize: '13px'
+    fontSize: '13px',
+    color: 'lightgreen',
+    backgroundColor: 'darkslategrey'
 };
 
 const buttonStyle = {
@@ -41,7 +44,7 @@ const Cell = ({ value, onChange }) => {
             }
         };
         return (
-            <div className='item'>
+            <div style={itemStyle} className='item'>
                 <input style={inputStyle} type="text" value={text}
                     onChange={handleInputChange} />
                 <button style={buttonStyle} onClick={handleSaveClick}>Ok</button>

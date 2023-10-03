@@ -1,14 +1,15 @@
 import React from 'react'
 
-import Table from '../components/Table.js'
+import Timesheet from '../components/Timesheet.js';
 
 import '../css/app.css'
+import '../css/flexbox.css'
 
 function App() {
 
   return (
     <div className="app">
-      <Table />
+     <Timesheet />
     </div>
   );
 }
