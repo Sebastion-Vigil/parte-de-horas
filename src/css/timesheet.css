@@ -16,8 +16,14 @@
     background-color: springgreen;
 }
 
+.spread-row {
+    width: 768px;
+    height: 68px;
+    background-color: lightslategrey;
+}
+
 .cell {
-    width: 101px;
-    height: 42px;
+    width: 107px;
+    height: 66px;
     background-color: lightyellow;
 }
