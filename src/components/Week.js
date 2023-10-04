@@ -1,10 +1,12 @@
 import React from 'react'
 
-import '../css/week.css';
+import Spread from './Spread.js';
 
 const Week = () => {
     return (
-        <div className='week flx-cl-cnt-cnt'>Week</div>
+        <div className='week flx-cl-cnt-cnt'>
+            <Spread />
+        </div>
     )
 }
 

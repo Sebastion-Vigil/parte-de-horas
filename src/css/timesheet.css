@@ -3,3 +3,21 @@
     height: 655px;
     border: 2px solid silver;
 }
+
+.week {
+    width: 825px;
+    height: 550px;
+    background-color: grey;
+}
+
+.spread {
+    width: 775px;
+    height: 500px;
+    background-color: springgreen;
+}
+
+.cell {
+    width: 101px;
+    height: 42px;
+    background-color: lightyellow;
+}

@@ -7,8 +7,6 @@ import '../css/timesheet.css';
 const Timesheet = () => {
     return (
         <div className='timesheet flx-cl-spc-evn-cnt'>
-            Timesheet
-            <Week />
             <Week />
         </div>
     )

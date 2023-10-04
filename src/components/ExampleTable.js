@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import Cell from './Cell.js'
+import ExampleCell from './Cell.js'
 
-const Table = () => {
+const ExampleTable = () => {
 
     const [values, setValues] = useState(['1', '2', '3', '4', '5', '6']);
     // console.log(...values);
@@ -17,7 +17,7 @@ const Table = () => {
                         };
                         return (
                             <tr key={index}>
-                                <td><Cell value={value} onChange={handleChange} /></td>
+                                <td><ExampleCell value={value} onChange={handleChange} /></td>
                             </tr>
                         );
                     })
@@ -27,4 +27,4 @@ const Table = () => {
     );
 };
 
-export default Table;
+export default ExampleTable;
