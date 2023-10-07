@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import ExampleCell from './Cell.js'
+import ExampleCell from './ExampleCell.js'
 
 const ExampleTable = () => {
 
