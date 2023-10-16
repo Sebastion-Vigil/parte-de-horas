@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Timesheet from '../components/Timesheet.js';
+import Timesheet from './Timesheet.js';
 
 import '../css/app.css'
 import '../css/flexbox.css'
