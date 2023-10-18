@@ -1,5 +1,41 @@
 .timesheet {
     width: 1355px;
     height: 655px;
-    border: 2px solid silver;
+    border: 2px solid blue;
+}
+
+.week {
+    width: 825px;
+    height: 550px;
+    background-color: grey;
+}
+
+.description-row {
+    width: 825px;
+    height: 78px;
+    background-color: orange;
+}
+
+.description {
+    width: 137px;
+    height: 75px;
+    background-color: darkslateblue;
+}
+
+.spread {
+    width: 775px;
+    height: 500px;
+    background-color: springgreen;
+}
+
+.spread-row {
+    width: 768px;
+    height: 68px;
+    background-color: lightslategrey;
+}
+
+.cell {
+    width: 107px;
+    height: 66px;
+    background-color: lightyellow;
 }

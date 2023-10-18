@@ -39,6 +39,13 @@
     align-items: center;
     flex-wrap: wrap;
   }
+
+  .flx-rw-st-st-wrp {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
   
   .flx-rw-flx-end-cnt {
     display: flex;
