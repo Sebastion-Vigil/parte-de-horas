@@ -30,6 +30,12 @@
   }
   
   /* FLEX ROW */
+
+  .flx-rw-flx-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   .flx-rw-cnt-cnt {
     display: flex;
     justify-content: center;

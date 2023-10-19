@@ -14,6 +14,10 @@ const Week = () => {
             <DaySum />
             <DaySum />
             <DaySum />
+            <div className='week-total-row flx-rw-flx-end'>
+                <div className='week-total-txt flx-cl-cnt-cnt'>WEEKLY TOTALS</div>
+                <div className='week-total'></div>
+            </div>
         </div>
     )
 }

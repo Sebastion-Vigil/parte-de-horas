@@ -3,7 +3,7 @@ import React from 'react';
 
 const DaySum = () => {
     return (
-        <div className='daysum'></div>
+        <div className='day-summary-row'></div>
     )
 }
 

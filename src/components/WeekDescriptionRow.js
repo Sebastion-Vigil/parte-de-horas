@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const WeekDescriptionRow = () => {
-    const descriptions = useState(['Date', 'Start Time', 'Break Start', 'Break End', 'End Time', 'Total / Reg / OT'])
+    const descriptions = useState(['Date', 'Start Time', 'Break Start', 'Break End', 'End Time', 'Reg | OT | Total'])
     return (
         <div className='desc-row flx-rw-spc-btw-cnt'>
             {
