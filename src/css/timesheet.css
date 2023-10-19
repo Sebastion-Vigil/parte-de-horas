@@ -6,36 +6,27 @@
 
 .week {
     width: 825px;
-    height: 550px;
-    background-color: grey;
+    height: 264px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.description-row {
+.desc-row {
     width: 825px;
-    height: 78px;
-    background-color: orange;
+    height: 32px;
+    background-color: black;
 }
 
-.description {
-    width: 137px;
-    height: 75px;
-    background-color: darkslateblue;
+.desc-cell {
+    width: 135.5px;
+    height: 32px;
+    background-color: whitesmoke;
 }
 
-.spread {
-    width: 775px;
-    height: 500px;
-    background-color: springgreen;
+.daysum {
+    width: 825px;
+    height: 32px;
+    background-color: white;
 }
 
-.spread-row {
-    width: 768px;
-    height: 68px;
-    background-color: lightslategrey;
-}
-
-.cell {
-    width: 107px;
-    height: 66px;
-    background-color: lightyellow;
-}

@@ -1,4 +1,6 @@
 /* Legend: flex/(col || row)/(flex-direction)/(justify-content)/(align-items)/(flex-wrap)   */
+
+/* FLEX COLUMN */
 .flx-cl-cnt-cnt {
     display: flex;
     flex-direction: column;
@@ -27,10 +29,17 @@
     align-items: center;
   }
   
+  /* FLEX ROW */
   .flx-rw-cnt-cnt {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .flx-rw-cnt-st {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
   }
   
   .flx-rw-cnt-cnt-wrp {
@@ -65,3 +74,8 @@
     align-items: center;
   }
   
+  .flx-rw-spc-btw-cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
