@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 const WeekDescriptionRow = () => {
     const descriptions = useState(['Date', 'Start Time', 'Break Start', 'Break End', 'End Time', 'Reg | OT | Total'])
     return (
-        <div className='desc-row flx-rw-spc-btw-cnt'>
+        <div className='week-description-row flx-rw-btw-cnt'>
             {
                 descriptions[0].map((v, i) => {
                     return (
-                        <div key={i} className='desc-cell flx-cl-cnt-cnt'>{v}</div>
+                        <div key={i} className='week-description-cell flx-cl-cnt-cnt'>{v}</div>
                     )
                 })
             }

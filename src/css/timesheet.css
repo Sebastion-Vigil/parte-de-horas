@@ -1,45 +1,67 @@
 /* Timesheet */
 .timesheet {
     width: 1355px;
-    height: 655px;
-    border: 2px solid blue;
+    height: auto;
+    /* border: 2px solid blue; */
 }
+
+/* Header */
+
+.header {
+    width: 825px;
+    height: 290px;
+    background-color: white;
+}
+
+/* EmployeeNameRow */
+
+.employee-name-row {
+    width: 825px;
+    height: 68px;
+}
+
+.name-row {
+    width: 825px;
+    height: 32px;
+    background-color: white;
+}
+
+/* .underline {
+    border-bottom: 2px solid black;
+} */
 
 /* Week */
 .week {
     width: 825px;
     height: 320px;
-    display: flex; 
-    flex-direction: column;
-    justify-content: space-around;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
 }
 
-.week-total-row {
+.total-row {
     width: 825px;
     height: 35px;
     background-color: white;
 }
 
-.week-total-txt {
-  width: 272px;
-  height: 35px;
+.total-txt {
+    width: 272px;
+    height: 35px;
 }
 
-.week-total {
-  width: 138px;
-  height: 35px;
-  background-color: lightgrey;
+.total {
+    width: 138px;
+    height: 35px;
+    background-color: lightgrey;
 }
 
 /* WeekDescriptionRow */
-.desc-row {
+.week-description-row {
     width: 825px;
     height: 32px;
     background-color: black;
 }
 
-.desc-cell {
+.week-description-cell {
     width: 135.5px;
     height: 32px;
     background-color: whitesmoke;

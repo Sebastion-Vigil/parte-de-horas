@@ -5,7 +5,7 @@ import DaySum from './DaySum.js';
 
 const Week = () => {
     return (
-        <div className='week'>
+        <div className='week flx-cl-rnd'>
             <WeekDescriptionRow />
             <DaySum />
             <DaySum />
@@ -14,9 +14,9 @@ const Week = () => {
             <DaySum />
             <DaySum />
             <DaySum />
-            <div className='week-total-row flx-rw-flx-end'>
-                <div className='week-total-txt flx-cl-cnt-cnt'>WEEKLY TOTALS</div>
-                <div className='week-total'></div>
+            <div className='total-row flx-rw-end'>
+                <div className='total-txt flx-cl-cnt-cnt'>WEEKLY TOTALS</div>
+                <div className='total'></div>
             </div>
         </div>
     )
