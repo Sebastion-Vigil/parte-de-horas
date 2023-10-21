@@ -10,7 +10,8 @@
 .header {
     width: 825px;
     height: 290px;
-    background-color: white;
+    background-image: url('../assets/time-sheet-header.png');
+    background-size: 100% 100%;
 }
 
 /* EmployeeNameRow */
@@ -23,7 +24,7 @@
 .name-row {
     width: 825px;
     height: 32px;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 /* .underline {
@@ -40,7 +41,7 @@
 .total-row {
     width: 825px;
     height: 35px;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .total-txt {
@@ -71,5 +72,5 @@
 .day-summary-row {
     width: 825px;
     height: 32px;
-    background-color: white;
+    background-color: whitesmoke;
 }
