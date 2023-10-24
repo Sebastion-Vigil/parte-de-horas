@@ -7,6 +7,7 @@ const DaySum = () => {
     const [vals, setVals] = useState(['8:00', '12:00', '1:00', '5:00'])
     return (
         <div className='day-summary-row flx-rw-evn-cnt'>
+            <Cell value={`mm--dd--yyyy`} />
             {
                 vals.map((value, index) => {
                     const handleChange = value => {
@@ -18,6 +19,7 @@ const DaySum = () => {
                     )
                 })
             }
+            <Cell value={`TOTAL`} />
         </div>
     )
 }
