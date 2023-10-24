@@ -1,9 +1,24 @@
-import React from 'react';
-// date/start time/break start/break end/end time/[reg/ot/totals]
+import React, { useState } from 'react';
+
+import Cell from './Cell.js';
+
 
 const DaySum = () => {
+    const [vals, setVals] = useState(['8:00', '12:00', '1:00', '5:00'])
     return (
-        <div className='day-summary-row'></div>
+        <div className='day-summary-row flx-rw-evn-cnt'>
+            {
+                vals.map((value, index) => {
+                    const handleChange = value => {
+                        console.log('handleChange!', value)
+                        setVals(vals.map((v,i) => index === i ? value : v));
+                    }
+                    return (
+                        <Cell key={index} value={value} onChange={handleChange} />
+                    )
+                })
+            }
+        </div>
     )
 }
 

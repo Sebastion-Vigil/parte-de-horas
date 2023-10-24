@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Cell from './Cell.js'
+import ExampleCell from './ExampleCell.js'
 
 const ExampleTable = () => {
 
@@ -17,7 +17,7 @@ const ExampleTable = () => {
                         };
                         return (
                             <tr key={index}>
-                                <td><Cell value={value} onChange={handleChange} /></td>
+                                <td><ExampleCell value={value} onChange={handleChange} /></td>
                             </tr>
                         );
                     })

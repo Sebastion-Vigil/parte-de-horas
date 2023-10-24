@@ -72,5 +72,12 @@
 .day-summary-row {
     width: 825px;
     height: 32px;
-    background-color: whitesmoke;
+    background-color: grey;
+}
+
+/*  Cell */
+.cell {
+    width: 135.5px;
+    height: 32px;
+    background-color: lightgrey;
 }
