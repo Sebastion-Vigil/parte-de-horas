@@ -15,7 +15,7 @@ const DaySum = () => {
                         setVals(vals.map((v,i) => index === i ? value : v));
                     }
                     return (
-                        <Cell key={index} i={index} value={value} onChange={handleChange} />
+                        <Cell key={index} value={value} onChange={handleChange} />
                     )
                 })
             }

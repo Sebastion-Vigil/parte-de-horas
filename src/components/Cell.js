@@ -1,16 +1,9 @@
 import React from 'react';
 
-const Cell = ({value, i, onChange}) => {
-    const clickCell = () => {
-        console.log('index: ', i)
-    }
+const Cell = ({value, onChange}) => {
     return (
         <div
-          className='cell flx-cl-cnt-cnt'
-          onClick={clickCell}
-        >
-            {value}
-        </div>
+          className='cell flx-cl-cnt-cnt'>{value}</div>
     )
 };
 
