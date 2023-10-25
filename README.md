@@ -4,6 +4,7 @@
   - https://dirask.com/posts/React-create-dynamic-editable-table-DNKArp
   - https://stackoverflow.com/questions/26518629/dynamically-rendering-a-react-component
   - https://stackoverflow.com/questions/42083181/is-it-possible-to-return-empty-in-react-render-function
+  - https://bobbyhadz.com/blog/react-enter-key-submit-form
 
 ## Component Heirarchy Note: 
 --0 Timesheet

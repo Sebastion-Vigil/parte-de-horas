@@ -1,8 +1,16 @@
 import React from 'react';
 
-const Cell = (props) => {
+const Cell = ({value, i, onChange}) => {
+    const clickCell = () => {
+        console.log('index: ', i)
+    }
     return (
-        <div className='cell flx-cl-cnt-cnt'>{props.value}</div>
+        <div
+          className='cell flx-cl-cnt-cnt'
+          onClick={clickCell}
+        >
+            {value}
+        </div>
     )
 };
 
