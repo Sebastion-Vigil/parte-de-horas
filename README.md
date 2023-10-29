@@ -6,8 +6,14 @@
   - https://stackoverflow.com/questions/42083181/is-it-possible-to-return-empty-in-react-render-function
   - https://bobbyhadz.com/blog/react-enter-key-submit-form
 
-## Component Heirarchy Note: 
+## Component Heirarchy: 
 --0 Timesheet
 ----1 Week
 ------2 DaySum
 --------3 Cell
+
+### Notes: 
+ - Make f() that converts military time to standard time & vice versa
+   * This way can present standard time to user...
+   * ...& calculate w/military time (easier) behind the scenes
+ - 

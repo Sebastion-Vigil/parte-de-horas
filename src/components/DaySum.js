@@ -11,7 +11,6 @@ const DaySum = () => {
             {
                 vals.map((value, index) => {
                     const handleChange = value => {
-                        console.log('handleChange!', value)
                         setVals(vals.map((v,i) => index === i ? value : v));
                     }
                     return (
