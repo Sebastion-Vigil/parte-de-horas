@@ -81,3 +81,7 @@
     height: 32px;
     background-color: lightgrey;
 }
+
+.no-display-bttn {
+    display: none;
+}

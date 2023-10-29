@@ -18,13 +18,24 @@ const Cell = ({value, onChange}) => {
             }
         };
         return (
-            <input 
-              className='cell flx-cl-cnt-cnt' 
-              type="text" 
-              value={text} 
-              onChange={handleInputChange} 
-              onSubmit={handleSaveClick} 
-            />
+            // <input 
+            //   className='cell flx-cl-cnt-cnt' 
+            //   type="text" 
+            //   value={text} 
+            //   onChange={handleInputChange} 
+            //   onSubmit={handleSaveClick} 
+            // />
+            <div className='cell flx-cl-cnt-cnt'>
+                <form className='cell flx-cl-cnt-cnt' onSubmit={handleSaveClick}>
+                    <input
+                      className='cell flx-cl-cnt-cnt'
+                      type="text"
+                      value={text}
+                      onChange={handleInputChange} 
+                    />
+                    <button className='no-display-bttn' type="submit"/>
+                </form>
+            </div>
         )
     }
     if (mode === 'read') {
