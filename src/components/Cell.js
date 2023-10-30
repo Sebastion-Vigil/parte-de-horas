@@ -25,10 +25,10 @@ const Cell = ({value, onChange}) => {
             //   onChange={handleInputChange} 
             //   onSubmit={handleSaveClick} 
             // />
-            <div className='cell flx-cl-cnt-cnt'>
-                <form className='cell flx-cl-cnt-cnt' onSubmit={handleSaveClick}>
+            <div className='cell'>
+                <form className='cell' onSubmit={handleSaveClick}>
                     <input
-                      className='cell flx-cl-cnt-cnt'
+                      className='cell'
                       type="text"
                       value={text}
                       onChange={handleInputChange} 
