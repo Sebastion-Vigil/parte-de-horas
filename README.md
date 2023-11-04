@@ -16,6 +16,7 @@
  - ~~Make f() that converts military time to standard time & vice versa~~
    * This way can present standard time to user...
    * ...& calculate w/military time (easier) behind the scenes
+ - Allow user to select AM/PM
  - Intercept input
  - Make regex pattern 2 clean input 
    * (Only Ns allowed)
