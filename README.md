@@ -5,6 +5,7 @@
   - https://stackoverflow.com/questions/26518629/dynamically-rendering-a-react-component
   - https://stackoverflow.com/questions/42083181/is-it-possible-to-return-empty-in-react-render-function
   - https://bobbyhadz.com/blog/react-enter-key-submit-form
+  - https://react.dev/reference/react-dom/components/input
 
 ## Component Heirarchy: 
 --0 Timesheet
