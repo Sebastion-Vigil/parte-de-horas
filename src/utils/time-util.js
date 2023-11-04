@@ -22,5 +22,22 @@ function timeStrToMins(strTime) {
   
     return `${sign}${h}:${m}`;
   }
+
+  function militaryToStandard(mt) { // e.g. -> '14:30'
+    let [h, m] = mt.split(":");
+    h = Number(h)
+    m = Number(m)
+    if (h < 12) return `${h}:${m}AM`;
+    if (h === 12) return `${h}:${m}PM`;
+    if (h > 12) return `${h - 12}:${m}PM`;
+  }
+
+  function standardToMilitary(st) { // e.g. -> '9:30:PM' ||'9:30:AM'
+    let [h, m, xM] = st.split(":")
+    h = Number(h)
+    m = Number(m)
+    if (xM === 'AM') return `${h}:${m}`;
+    if (xM === 'PM') return `${h + 12}:${m}`;
+  }
   
-  module.exports = { timeStrToMins, minsToTimeStr };
+  module.exports = { timeStrToMins, minsToTimeStr, militaryToStandard, standardToMilitary };
