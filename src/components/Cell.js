@@ -18,20 +18,13 @@ const Cell = ({value, onChange}) => {
             }
         };
         return (
-            // <input 
-            //   className='cell flx-cl-cnt-cnt' 
-            //   type="text" 
-            //   value={text} 
-            //   onChange={handleInputChange} 
-            //   onSubmit={handleSaveClick} 
-            // />
             <div className='cell'>
                 <form className='cell' onSubmit={handleSaveClick}>
                     <input
-                      className='cell'
+                      className='input-cell'
                       type="text"
                       value={text}
-                      onChange={handleInputChange} 
+                      onChange={handleInputChange}
                     />
                     <button className='no-display-bttn' type="submit"/>
                 </form>

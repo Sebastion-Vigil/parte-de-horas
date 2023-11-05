@@ -82,6 +82,12 @@
     background-color: lightgrey;
 }
 
+.input-cell {
+    width: 100px;
+    height: 30px;
+    background-color: lightcoral;
+}
+
 .no-display-bttn {
     display: none;
 }
