@@ -18,7 +18,7 @@ const Cell = ({value, onChange}) => {
             }
         };
         return (
-            <div className='cell'>
+            <div className='cell flx-rw-cnt-cnt'>
                 <form className='cell' onSubmit={handleSaveClick}>
                     <input
                       className='input-cell'
@@ -26,6 +26,10 @@ const Cell = ({value, onChange}) => {
                       value={text}
                       onChange={handleInputChange}
                     />
+                    <div className='radio-fields'>
+                        <input className='radio' type='radio' value='AM' />
+                        <input className='radio' type='radio' value='PM' />
+                    </div>
                     <button className='no-display-bttn' type="submit"/>
                 </form>
             </div>

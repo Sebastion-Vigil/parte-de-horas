@@ -88,6 +88,11 @@
     background-color: lightcoral;
 }
 
+.radio {
+    width: 35.5px;
+    height: 30px;
+}
+
 .no-display-bttn {
     display: none;
 }
