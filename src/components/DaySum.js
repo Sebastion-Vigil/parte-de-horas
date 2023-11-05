@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Cell from './Cell.js';
 
@@ -9,6 +9,9 @@ const DaySum = () => {
     const handleDateChange = (value) => {
         setDate(value);
     }
+    useEffect(() => {
+        console.log('vals: ', vals);
+    }, [vals])
     return (
         <div className='day-summary-row flx-rw-evn-cnt'>
             <Cell value={date} onChange={handleDateChange} />
