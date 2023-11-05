@@ -17,7 +17,7 @@
  - ~~Make f() that converts military time to standard time & vice versa~~
    * This way can present standard time to user...
    * ...& calculate w/military time (easier) behind the scenes
- - Send Cell data ^ 2 DaySum
+ - ~~Send Cell data ^ 2 DaySum~~
  - Allow user to select AM/PM
  - Intercept input
  - Make regex pattern 2 clean input 
