@@ -26,10 +26,6 @@ const Cell = ({value, onChange}) => {
                       value={text}
                       onChange={handleInputChange}
                     />
-                    <div className='radio-fields'>
-                        <input className='radio' type='radio' value='AM' />
-                        <input className='radio' type='radio' value='PM' />
-                    </div>
                     <button className='no-display-bttn' type="submit"/>
                 </form>
             </div>
