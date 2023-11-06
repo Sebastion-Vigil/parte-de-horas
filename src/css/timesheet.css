@@ -24,7 +24,7 @@
 .name-row {
     width: 825px;
     height: 32px;
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
 }
 
 /* .underline {
@@ -41,7 +41,7 @@
 .total-row {
     width: 825px;
     height: 35px;
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
 }
 
 .total-txt {
@@ -52,27 +52,27 @@
 .total {
     width: 138px;
     height: 35px;
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
 }
 
 /* WeekDescriptionRow */
 .week-description-row {
     width: 825px;
     height: 32px;
-    background-color: black;
+    /* background-color: black; */
 }
 
 .week-description-cell {
     width: 135.5px;
     height: 32px;
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
 }
 
 /* DaySummaryRow */
 .day-summary-row {
     width: 825px;
     height: 32px;
-    background-color: grey;
+    /* background-color: grey; */
 }
 
 /*  Cell */
@@ -82,10 +82,31 @@
     background-color: lightgrey;
 }
 
+.input-form {
+    width: 135.5px;
+    height: 32px;
+    background-color: orange;   
+}
+
 .input-cell {
-    width: 100px;
-    height: 30px;
-    background-color: lightcoral;
+    width: 75px;
+    height: 28px;
+    background-color: lightblue;
+}
+
+.radio-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50px;
+    height: 32px;
+    background-color: lightgreen;
+}
+
+.radio-bttn {
+    width: 34px;
+    height: 15px;
 }
 
 .no-display-bttn {

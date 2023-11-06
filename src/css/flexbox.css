@@ -68,6 +68,12 @@
     align-items: flex-start;
     flex-wrap: wrap;
   }
+
+  .flx-rw-st-cnt {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
   
   .flx-rw-end-cnt {
     display: flex;
