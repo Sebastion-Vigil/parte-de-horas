@@ -79,34 +79,31 @@
 .cell {
     width: 135.5px;
     height: 32px;
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
 }
 
 .input-form {
     width: 135.5px;
     height: 32px;
-    background-color: orange;   
+    /* background-color: orange;    */
 }
 
 .input-cell {
     width: 75px;
     height: 28px;
-    background-color: lightblue;
+    /* background-color: lightblue; */
 }
 
-.radio-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+.am-pm-section {
     width: 50px;
     height: 32px;
     background-color: lightgreen;
 }
 
-.radio-bttn {
-    width: 34px;
-    height: 15px;
+.am-pm-selector {
+    width: 27px;
+    height: 27px;
+    background-color: purple;
 }
 
 .no-display-bttn {
