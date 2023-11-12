@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-const Cell = ({value, onChange}) => {
+const Cell = ({value, onChange, amPm, toggle}) => {
     const [mode, setMode] = useState('read');
     const [text, setText] = useState(value ?? '');
-    const [amPm, setAmPm] = useState('AM')
     useEffect(() => {
         setText(value);
     }, [value]);
@@ -18,10 +17,6 @@ const Cell = ({value, onChange}) => {
                 onChange(text);
             }
         };
-        const toggleAmPm = () => {
-            const toggled = amPm === 'AM' ? 'PM' : 'AM';
-            setAmPm(toggled);
-        }
         return (
             <div className='cell flx-cl-cnt-cnt'>
                 <form className='input-form flx-rw-st-cnt' onSubmit={handleSaveClick}>
@@ -32,8 +27,8 @@ const Cell = ({value, onChange}) => {
                       onChange={handleInputChange}
                     />
                     <div className='am-pm-section flx-cl-cnt-cnt'>
-                        <div className='am-pm-selector flx-cl-cnt-cnt' onClick={toggleAmPm}>
-                            {amPm}
+                        <div className='am-pm-selector flx-cl-cnt-cnt' onClick={toggle}>
+                          {amPm}
                         </div>
                     </div>
                     <button className='no-display-bttn' type="submit"/>

@@ -20,7 +20,7 @@
  - ~~Send Cell data ^ 2 DaySum~~
  - ~~try 2 remove bttn in Cell & + type='submit' c if worky~~
  - ~~Allow user to select AM/PM~~
- - Lift am/pm state up from Cell to parent DaySum
+ - ~~Lift am/pm state & functionality up from Cell to parent DaySum~~
  - Intercept input
  - Make regex pattern 2 clean input 
    * (Only Ns allowed)
