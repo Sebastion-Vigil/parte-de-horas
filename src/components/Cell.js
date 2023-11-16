@@ -9,7 +9,9 @@ const Cell = ({value, onChange, amPm, toggle}) => {
     if (mode === 'edit') {
         const handleInputChange = (e) => {
             // console.log('Cell: handleInputChange: ', e.target.value)
-            setText(e.target.value);
+            let val = e.target.value;
+            val = val.replace(/\D/g, "");
+            setText(val);
         };
         const handleSaveClick = () => {
             setMode('read');

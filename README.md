@@ -21,7 +21,7 @@
  - ~~try 2 remove bttn in Cell & + type='submit' c if worky~~
  - ~~Allow user to select AM/PM~~
  - ~~Lift am/pm state & functionality up from Cell to parent DaySum~~
- - Intercept input
+ - ~~Sanitize input~~
    * Extrapolate from link above & integrate into Cell.js
  - Make regex pattern 2 clean input 
    * (Only Ns allowed)
