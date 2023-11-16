@@ -23,12 +23,9 @@ const DaySum = () => {
                     }
                     const xM = amPm[index]
                     const toggleAmPm = () => {
-                        console.log('toggle clicked!')
-                        console.log(amPm[index])
                         const toggled = amPm[index] === 'AM' ? 'PM' : 'AM';
                         const updatedAmPm = [...amPm];
                         updatedAmPm[index] = toggled;
-                        console.log(updatedAmPm)
                         setAmPm(updatedAmPm);
                     }
                     return (
