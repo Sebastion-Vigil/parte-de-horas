@@ -22,6 +22,7 @@
  - ~~Allow user to select AM/PM~~
  - ~~Lift am/pm state & functionality up from Cell to parent DaySum~~
  - ~~Sanitize input~~
+ - Splice & dice 2 make h/m vars & interpolate ":" between
    * Extrapolate from link above & integrate into Cell.js
  - Make regex pattern 2 clean input 
    * (Only Ns allowed)
