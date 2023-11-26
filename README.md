@@ -8,10 +8,10 @@
   - https://react.dev/reference/react-dom/components/input
 
 ## Component Heirarchy:
---0 Timesheet
-----1 Week
-------2 DaySum
---------3 Cell
+  *--0 Timesheet
+  *----1 Week
+  *------2 DaySum
+  *--------3 Cell
 
 ### Nxt:
  - ~~Make f() that converts military time to standard time & vice versa~~
