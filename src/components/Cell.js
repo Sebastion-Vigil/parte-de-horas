@@ -16,6 +16,7 @@ const Cell = ({value, onChange, amPm, toggle}) => {
         const handleSaveClick = () => {
             setMode('read');
             if (onChange) {
+                console.log('onChange!')
                 onChange(text);
             }
         };

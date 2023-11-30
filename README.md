@@ -25,8 +25,8 @@
  - ~~Sanitize input~~
  - Splice & dice 2 make h/m vars & interpolate ":" between
    * Extrapolate from link above & integrate into Cell.js
- - OR
-   * Rebuild Cell.js w/2 h/m inputs w/":" element in between
- - Make regex pattern 2 clean input 
-   * (Only Ns allowed)
+ - Make regex pattern 2 clean input
+   * Allow only "0-9" & ":" in input 
+     - Getting closer:
+     - https://stackoverflow.com/questions/21374605/javascript-to-allow-only-numbers-comma-dot-backspace
  - Insert a ":" between hrs/mins
