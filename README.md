@@ -33,9 +33,20 @@
  - Insert a ":" between hrs/mins
 
 
-## Notes & Links
- 
-### Component Heirarchy:
+## Other Helpful Info
+
+### Brainstorm
+  - Input str length min 3 max 4
+    * Check for input len < 3 in place
+      - refactor alert msg?
+    * How 2 handle invalid input, e.g., 1300, 3300, 2400?
+      - if input str len 4:
+        - 1st char can only be 0-1
+        - 2nd char only be 0-2
+  - Check which of AM/PM user selected?
+
+
+### Component Heirarchy
   - --0 Timesheet
   - ----1 Week
   - ------2 DaySum

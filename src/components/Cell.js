@@ -18,7 +18,7 @@ const Cell = ({value, onChange, amPm, toggle}) => {
             if (onChange) {
                 // console.log(text)
                 if (text.length < 3) {
-                    alert("Format: hh:mm, e.g., 12:30 or 7:25")
+                    alert("Format pattern: hh:mm or h:mm, e.g., 12:30 or 7:25")
                     return
                 }
 
