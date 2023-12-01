@@ -11,7 +11,7 @@
    * _Supervisor account will also have own timesheet space like normal user_
  - Standard time (AM/PM) input
    * _converts to military time behind scenes for easier calculation_
-   * _converts back to standard time (AM/PM) for user
+   * _converts back to standard time (AM/PM) for user_
 
 
 ## Current Progress:
