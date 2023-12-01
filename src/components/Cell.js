@@ -16,7 +16,12 @@ const Cell = ({value, onChange, amPm, toggle}) => {
         const handleSaveClick = () => {
             setMode('read');
             if (onChange) {
-                console.log('onChange!')
+                // console.log(text)
+                if (text.length < 3) {
+                    alert("Format: hh:mm, e.g., 12:30 or 7:25")
+                    return
+                }
+
                 onChange(text);
             }
         };
