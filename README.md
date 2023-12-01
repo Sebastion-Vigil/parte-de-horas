@@ -1,4 +1,17 @@
-# parte-de-horas
+# React Timesheet Application
+ - So I've been building a timesheet...
+ - To be a complete MERN app when finished
+ - User will be able to register & create account
+ - User will be able to save timesheet as downloadable PDF
+ - Each user can only see own content
+ - Single supervisor account available in addition to multiple user accounts
+   * _Supervisor account will have access to timesheets for all users_
+   * _Supervisor account will also have own timesheet space like normal user_
+ - Standard time (AM/PM) input
+   * _converts to military time behind scenes for easier calculation_
+   * _converts back to standard time (AM/PM) for user
+
+## parte-de-horas
   - https://dirask.com/posts/React-editable-table-cell-after-mouse-click-DWeBEj
   - https://dirask.com/posts/React-change-state-from-props-functional-component-prKRbj
   - https://dirask.com/posts/React-create-dynamic-editable-table-DNKArp
@@ -7,13 +20,13 @@
   - https://bobbyhadz.com/blog/react-enter-key-submit-form
   - https://react.dev/reference/react-dom/components/input
 
-## Component Heirarchy:
+### Component Heirarchy:
   - --0 Timesheet
   - ----1 Week
   - ------2 DaySum
   - --------3 Cell
 
-### Nxt:
+#### Work in Progress:
  - ~~Make f() that converts military time to standard time & vice versa~~
    * ~~This way can present standard time to user...~~
    * ~~...& calculate w/military time (easier) behind the scenes~~
