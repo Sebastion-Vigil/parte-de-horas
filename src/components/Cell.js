@@ -19,7 +19,11 @@ const Cell = ({value, onChange, amPm, toggle}) => {
                 // console.log(text)
                 if (text.length < 3) {
                     alert("Format pattern: hh:mm or h:mm, e.g., 12:30 or 7:25")
-                    return
+                    return;
+                }
+                if (text.length > 4) {
+                    alert("Time cannot be more than 4 digits in length!")
+                    return;
                 }
 
                 onChange(text);

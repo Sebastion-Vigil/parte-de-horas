@@ -19,6 +19,7 @@ const DaySum = () => {
             {
                 vals.map((value, index) => {
                     const handleChange = value => {
+                        console.log("DaySum handleChange: ")
                         setVals(vals.map((v,i) => index === i ? value : v));
                     }
                     const xM = amPm[index]
@@ -26,6 +27,7 @@ const DaySum = () => {
                         const toggled = amPm[index] === 'AM' ? 'PM' : 'AM';
                         const updatedAmPm = [...amPm];
                         updatedAmPm[index] = toggled;
+                        console.log("DaySum setAmPm: ")
                         setAmPm(updatedAmPm);
                     }
                     return (
