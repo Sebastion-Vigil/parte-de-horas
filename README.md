@@ -27,10 +27,6 @@
    * totally gots more 2 do here
  - Splice & dice 2 make h/m vars & interpolate ":" between
    * Extrapolate from link above & integrate into Cell.js
- - Make regex pattern 2 clean input
-   * Allow only "0-9" & ":" in input 
-     - Getting closer:
-     - https://stackoverflow.com/questions/21374605/javascript-to-allow-only-numbers-comma-dot-backspace
  - Insert a ":" between hrs/mins
  - In DaySum.js, make date and total Cells their own module and import
 
@@ -39,7 +35,6 @@
 
 ### Brainstorm
   - Input str length min 3 max 4
-  - Perhaps move logic check up to DaySum.js?
     * Check for input len < 3 in place
       - refactor alert msg?
     * Check for input len > 4 in place
@@ -52,6 +47,8 @@
     * Make italic?
     * Prevent default vals from being calculatable
       - (they should only serve as properly formatted examples)
+  - Perhaps move logic check up to DaySum.js?
+    * tinkering yields null thus far...
   - New State/Vars needed in DaySum.js:
     * DayStart
     * DayEnd
