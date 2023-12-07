@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 import Cell from './Cell.js';
 
-
 const DaySum = () => {
-    const [vals, setVals] = useState(['8:00', '12:00', '1:00', '5:00'])
+    const [vals, setVals] = useState(['', '', '', ''])
+    const [valPlaceholders] = useState(['8:00', '12:00', '1:00', '5:00'])
     const [amPm, setAmPm] = useState(['AM', 'PM', 'PM', 'PM'])
     const [date, setDate] = useState('mm-dd-yyyy')
     const handleDateChange = (value) => {
@@ -19,7 +19,7 @@ const DaySum = () => {
             {
                 vals.map((value, index) => {
                     const handleChange = value => {
-                        console.log("DaySum handleChange: ")
+                        // console.log("DaySum handleChange: ", value)
                         setVals(vals.map((v,i) => index === i ? value : v));
                     }
                     const xM = amPm[index]
@@ -27,11 +27,18 @@ const DaySum = () => {
                         const toggled = amPm[index] === 'AM' ? 'PM' : 'AM';
                         const updatedAmPm = [...amPm];
                         updatedAmPm[index] = toggled;
-                        console.log("DaySum setAmPm: ")
                         setAmPm(updatedAmPm);
                     }
+                    const valPlaceholder = valPlaceholders[index];
                     return (
-                        <Cell key={index} value={value} onChange={handleChange} amPm={xM} toggle={toggleAmPm} />
+                        <Cell 
+                        key={index} 
+                        value={value} 
+                        onChange={handleChange} 
+                        amPm={xM} 
+                        toggle={toggleAmPm} 
+                        placeholder={valPlaceholder} 
+                        />
                     )
                 })
             }

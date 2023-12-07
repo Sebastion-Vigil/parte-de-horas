@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from 'react';
 
-const Cell = ({value, onChange, amPm, toggle}) => {
+const Cell = ({value, onChange, amPm, toggle, placeholder}) => {
     const [mode, setMode] = useState('read');
     const [text, setText] = useState(value ?? '');
     useEffect(() => {
         setText(value);
     }, [value]);
     if (mode === 'edit') {
+        // live user input event handler
         const handleInputChange = (e) => {
-            // console.log('Cell: handleInputChange: ', e.target.value)
+            console.log('Cell: handleInputChange: ', e.target.value)
             let val = e.target.value;
+            // check for input > 4
+            if (val.length > 4) val = val.slice(0, 4);
+            // remove all non number chars
             val = val.replace(/\D/g, "");
             setText(val);
         };
@@ -17,15 +21,12 @@ const Cell = ({value, onChange, amPm, toggle}) => {
             setMode('read');
             if (onChange) {
                 // console.log(text)
-                if (text.length < 3) {
-                    alert("Format pattern: hh:mm or h:mm, e.g., 12:30 or 7:25")
+                if (text.length < 3) { // check for input < 3
+                    alert(
+                        "Input must be 3-4, e.g., 12:30 or 7:47"
+                    );
                     return;
                 }
-                if (text.length > 4) {
-                    alert("Time cannot be more than 4 digits in length!")
-                    return;
-                }
-
                 onChange(text);
             }
         };
@@ -37,6 +38,7 @@ const Cell = ({value, onChange, amPm, toggle}) => {
                       type="text"
                       value={text}
                       onChange={handleInputChange}
+                      placeholder={placeholder}
                     />
                     <div className='am-pm-section flx-cl-cnt-cnt'>
                         <div className='am-pm-selector flx-cl-cnt-cnt' onClick={toggle}>
