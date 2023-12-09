@@ -32,11 +32,6 @@
         - 1st char can only be 0-1
         - 2nd char only be 0-2
   - Check which of AM/PM user selected?
-  - Need to tinker w/default Cell vals
-    * Make italic?
-    * Prevent default vals from being calculatable
-      - (they should only serve as properly formatted examples)
-  - Perhaps move logic check up to DaySum.js?
   - New State/Vars needed in DaySum.js
     * DayStart
     * DayEnd
@@ -53,7 +48,6 @@
     * Disallow user input for DayEnd Cell if LunchEnd blank
       - LunchEnd will count as DayEnd by default
       - Alert/inform user forgetting to clock back in from lunch
-  - Maybe set default Cell vals to "" & use background imgs for example times?
 
 ### Helpful links
   - https://dirask.com/posts/React-editable-table-cell-after-mouse-click-DWeBEj

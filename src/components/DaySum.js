@@ -48,3 +48,5 @@ const DaySum = () => {
 }
 
 export default DaySum;
+
+// And all logic for calculating total hrs worked on a given day will go here
