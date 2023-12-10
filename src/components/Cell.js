@@ -70,9 +70,12 @@ const Cell = ({ value, onChange, amPm, toggle, placeholder }) => {
 
 export default Cell;
 
-// All logic for sanitizing input and checking it for invalid user entries will go here
-// This makes sense as Cell.js is two components in one: input cell & output cell
-// Don't like how the f()s are spread across the file, though I get why they are put where they are
-// Before, when building React apps using class syntax, I would always have the class methods (f()s)
-// starting near the top of the file, just under class state, with the markup always being last
-// but in this we have f() and markup mixed up together. 
+
+// working checks in place thus far:
+//   -> input len > 4 (the only check in handleSaveClick)
+//   -> input len < 3
+//   -> invalid time formats, e.g., 13:00, 30:00, 12:60, 1:70
+// works but needs improvement:
+//   -> fugly boolean line of code
+//   -> prefer to not use alert (handleSaveClick alert still ok, for now)
+//   -> user input completely reset; y not only strip offending char?
