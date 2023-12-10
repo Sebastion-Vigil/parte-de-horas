@@ -10,13 +10,20 @@ const Cell = ({ value, onChange, amPm, toggle, placeholder }) => {
         // live user input event handler
         const handleInputChange = (e) => {
             // console.log('Cell: handleInputChange: ', e.target.value)
+            let maxLen;
             let val = e.target.value;
             // remove all non number chars
             val = val.replace(/\D/g, "");
             // prevent 0 as 1st digit
             if (val.length === 1 && Number(val) < 1) val = "";
+            if (val.length === 1 && Number(val) > 1) {
+                maxLen = 3;
+            } else {
+                maxLen = 4;
+            }
             // check for input > 4
             if (val.length > 4) val = val.slice(0, 4);
+            console.log("maxLen: ", maxLen);
             setText(val);
         };
         const handleSaveClick = () => {
@@ -88,3 +95,9 @@ export default Cell;
 //      -> 1st char can be 1-9
 //      -> 2nd char (min 10s) cannot be > 5
 //      -> 3rd char can be 1-9
+//   -> Determine max len of input str:
+//      -> 1st char determines max len
+//      -> if 1st char > 1:
+//         -> max len 3
+//      -> else:
+//         -> max len 4
