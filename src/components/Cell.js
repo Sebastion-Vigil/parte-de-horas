@@ -13,12 +13,8 @@ const Cell = ({ value, onChange, amPm, toggle, placeholder }) => {
             let val = e.target.value;
             // remove all non number chars
             val = val.replace(/\D/g, "");
-            if ((val.length === 4 && (Number(val[0]) > 1 || Number(val[1]) > 2 || Number(val[2]) > 5)) || (val.length === 3 && Number(val[1]) > 5)) {
-                val = "";
-                alert(
-                    "Standard time only, e.g., 12:30 or 7:47."
-                )
-            }
+            // prevent 0 as 1st digit
+            if (val.length === 1 && Number(val) < 1) val = "";
             // check for input > 4
             if (val.length > 4) val = val.slice(0, 4);
             setText(val);
@@ -79,3 +75,16 @@ export default Cell;
 //   -> fugly boolean line of code
 //   -> prefer to not use alert (handleSaveClick alert still ok, for now)
 //   -> user input completely reset; y not only strip offending char?
+// ideas:
+//   -> Disallow 0 as 1st char
+//   -> determine early on whether input len 3 or 4
+//   -> easier to immediately strip invalid input on the spot
+//   -> if max len 4:
+//      -> 1st char cannot be > 1
+//      -> 2nd char cannot be > 2
+//      -> 3rd char (min 10s) cannot be > 5
+//      -> 4th char can be 1-9
+//   -> if max len 3:
+//      -> 1st char can be 1-9
+//      -> 2nd char (min 10s) cannot be > 5
+//      -> 3rd char can be 1-9
