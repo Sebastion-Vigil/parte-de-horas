@@ -16,14 +16,15 @@ const Cell = ({ value, onChange, amPm, toggle, placeholder }) => {
             val = val.replace(/\D/g, "");
             // prevent 0 as 1st digit
             if (val.length === 1 && Number(val) < 1) val = "";
+            // test 4 bugs b4 moving 4wrd
             if (val.length === 1 && Number(val) > 1) {
                 maxLen = 3;
-            } else {
+            } else if (val.length === 1 && Number(val) === 1) {
                 maxLen = 4;
             }
             // check for input > 4
             if (val.length > 4) val = val.slice(0, 4);
-            console.log("maxLen: ", maxLen);
+            console.log("maxLen: ", maxLen, "val: ", val);
             setText(val);
         };
         const handleSaveClick = () => {
@@ -85,6 +86,7 @@ export default Cell;
 // ideas:
 //   -> Disallow 0 as 1st char
 //   -> determine early on whether input len 3 or 4
+//      -> input must be 2 digits long to determine max len
 //   -> easier to immediately strip invalid input on the spot
 //   -> if max len 4:
 //      -> 1st char cannot be > 1
