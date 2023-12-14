@@ -10,20 +10,28 @@ const Cell = ({ value, onChange, amPm, toggle, placeholder }) => {
         // live user input event handler
         const handleInputChange = (e) => {
             // console.log('Cell: handleInputChange: ', e.target.value)
-            let maxLen;
             let val = e.target.value;
+            let maxLen = 4;
+            console.log('init maxLen: ', maxLen);
             // remove all non number chars
             val = val.replace(/\D/g, "");
+
             // prevent 0 as 1st digit
-            if (val.length === 1 && Number(val) < 1) val = "";
-            // test 4 bugs b4 moving 4wrd
-            if (val.length === 1 && Number(val) > 1) {
-                maxLen = 3;
-            } else if (val.length === 1 && Number(val) === 1) {
-                maxLen = 4;
-            }
-            // check for input > 4
-            if (val.length > 4) val = val.slice(0, 4);
+            if (val.length === 1 && Number(val[0]) < 1) val = "";
+
+            // 1st n cant b > 1 in 4 digit format, must b len 3
+            if (val.length === 1 && Number(val[0]) > 1) maxLen = 3;
+
+            // 2nd n cant b > 2 in 4 digit format, must b len 3
+            if (val.length === 2 && maxLen === 4 && Number(val[1]) > 2) maxLen = 3;
+
+            // if maxLen 3 disallow 2nd char (min 10s) 2 b > 5
+            if (val.length === 2 && maxLen === 3 && Number(val[1]) > 5) val = val.slice(0, 1);
+            
+            // 3rd n (min 10s) cant b > 5 in 4 digit format, must b len 3
+            if (val.length === 3 && maxLen === 4 && Number(val[2]) > 5) maxLen = 3;
+            // disallow input > maxLen
+            if (val.length > maxLen) val = val.slice(0, maxLen);
             console.log("maxLen: ", maxLen, "val: ", val);
             setText(val);
         };
