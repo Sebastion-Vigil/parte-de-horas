@@ -5,7 +5,7 @@ import { interceptLiveInput } from '../utils/live-input-util';
 const Cell = ({ value, onChange, amPm, toggle, placeholder }) => {
     const [mode, setMode] = useState('read');
     const [text, setText] = useState(value ?? '');
-    let [maxLen, setMaxLen] = useState(4);
+    let [maxLen] = useState(4);
     useEffect(() => {
         setText(value);
     }, [value]);
@@ -13,16 +13,11 @@ const Cell = ({ value, onChange, amPm, toggle, placeholder }) => {
         const handleInputChange = (e) => { // live user input event handler
             // console.log('Cell: handleInputChange: ', e.target.value)
             let val = e.target.value;
+            let updatedLen = maxLen;
             console.log('init maxLen: ', maxLen);
-            val = val.replace(/\D/g, ""); // remove all non number chars
-            if (val.length === 1 && Number(val) < 1) val = ""; // prvnt 0 as 1st dgt
-            if (val.length === 1 && Number(val) > 1) setMaxLen(3); // 1st n cnt b > 1 in 4 digit frmt, mst b len 3
-            if (val.length === 2 && maxLen === 4 && Number(val[1]) > 2) setMaxLen(3); // 2nd n cnt b > 2 in 4Dgt frmt, mst b len 3
-            if (val.length === 2 && (maxLen === 3 || maxLen === 4) && Number(val[1]) > 5) val = val.slice(0, 1); // if maxLen 3 disallow 2nd char (min 10s) 2 b > 5
-            if (val.length === 3 && maxLen === 4 && Number(val[2]) > 5) setMaxLen(3); // 3rd n (min 10s) cnt b > 5 in 4 dgt frmt, mst b len 3
-            if (val.length > maxLen) val = val.slice(0, maxLen); // disallow input > maxLen
-            console.log("maxLen: ", maxLen, "val: ", val);
-            setText(val);
+            let interceptedInput = interceptLiveInput(val, updatedLen);
+            console.log("maxLen: ", interceptedInput[1], "val: ", interceptedInput[0]);
+            setText(interceptedInput[0]);
         };
         const handleSaveClick = () => {
             setMode('read');
