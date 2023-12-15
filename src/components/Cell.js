@@ -13,11 +13,11 @@ const Cell = ({ value, onChange, amPm, toggle, placeholder }) => {
             let val = e.target.value;
             console.log('init maxLen: ', maxLen);
             val = val.replace(/\D/g, ""); // remove all non number chars
-            if (val.length === 1 && Number(val[0]) < 1) val = ""; // prevent 0 as 1st digit
-            if (val.length === 1 && Number(val[0]) > 1) setMaxLen(3); // 1st n cant b > 1 in 4 digit format, must b len 3
-            if (val.length === 2 && maxLen === 4 && Number(val[1]) > 2) setMaxLen(3); // 2nd n cant b > 2 in 4 digit format, must b len 3
-            if (val.length === 2 && maxLen === 3 && Number(val[1]) > 5) val = val.slice(0, 1); // if maxLen 3 disallow 2nd char (min 10s) 2 b > 5
-            if (val.length === 3 && maxLen === 4 && Number(val[2]) > 5) setMaxLen(3); // 3rd n (min 10s) cant b > 5 in 4 digit format, must b len 3
+            if (val.length === 1 && Number(val) < 1) val = ""; // prvnt 0 as 1st dgt
+            if (val.length === 1 && Number(val) > 1) setMaxLen(3); // 1st n cnt b > 1 in 4 digit frmt, mst b len 3
+            if (val.length === 2 && maxLen === 4 && Number(val[1]) > 2) setMaxLen(3); // 2nd n cnt b > 2 in 4Dgt frmt, mst b len 3
+            if (val.length === 2 && (maxLen === 3 || maxLen === 4) && Number(val[1]) > 5) val = val.slice(0, 1); // if maxLen 3 disallow 2nd char (min 10s) 2 b > 5
+            if (val.length === 3 && maxLen === 4 && Number(val[2]) > 5) setMaxLen(3); // 3rd n (min 10s) cnt b > 5 in 4 dgt frmt, mst b len 3
             if (val.length > maxLen) val = val.slice(0, maxLen); // disallow input > maxLen
             console.log("maxLen: ", maxLen, "val: ", val);
             setText(val);
