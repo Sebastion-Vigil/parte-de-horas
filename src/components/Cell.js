@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { interceptLiveInput } from '../utils/live-input-util';
+import { interceptInputEvent } from '../utils/input-event-util';
 
 const Cell = ({ value, onChange, amPm, toggle, placeholder }) => {
     const [mode, setMode] = useState('read');
@@ -15,7 +15,7 @@ const Cell = ({ value, onChange, amPm, toggle, placeholder }) => {
             let val = e.target.value;
             let updatedLen = maxLen;
             console.log('init maxLen: ', maxLen);
-            let interceptedInput = interceptLiveInput(val, updatedLen);
+            let interceptedInput = interceptInputEvent(val, updatedLen);
             console.log("maxLen: ", interceptedInput[1], "val: ", interceptedInput[0]);
             setText(interceptedInput[0]);
         };

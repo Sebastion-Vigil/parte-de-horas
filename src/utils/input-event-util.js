@@ -1,6 +1,6 @@
-function interceptLiveInput(input, newMaxLen) {
+function interceptInputEvent(input, newMaxLen) {
     input = input.replace(/\D/g, "");
-    if (Number(input[0]) < 1) input = input.slice(0, 0);
+    if (Number(input[0]) < 1) input = input.slice(1, input.length);
     if (Number(input[0]) > 1) newMaxLen = 3;
     if (Number(input[1]) > 2 && newMaxLen === 4) newMaxLen = 3;
     if (Number(input[1]) > 5 && (newMaxLen === 3 || newMaxLen === 4)) input = input.slice(0, 1);
@@ -9,4 +9,4 @@ function interceptLiveInput(input, newMaxLen) {
     return [input, newMaxLen];
 }
 
-module.exports = { interceptLiveInput };
+module.exports = { interceptInputEvent };
