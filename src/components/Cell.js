@@ -3,35 +3,22 @@ import React, { useState, useEffect } from 'react';
 const Cell = ({ value, onChange, amPm, toggle, placeholder }) => {
     const [mode, setMode] = useState('read');
     const [text, setText] = useState(value ?? '');
+    let [maxLen, setMaxLen] = useState(4);
     useEffect(() => {
         setText(value);
     }, [value]);
-    if (mode === 'edit') {
-        // live user input event handler
-        const handleInputChange = (e) => {
+    if (mode === 'edit') { 
+        const handleInputChange = (e) => { // live user input event handler
             // console.log('Cell: handleInputChange: ', e.target.value)
             let val = e.target.value;
-            let maxLen = 4;
             console.log('init maxLen: ', maxLen);
-            // remove all non number chars
-            val = val.replace(/\D/g, "");
-
-            // prevent 0 as 1st digit
-            if (val.length === 1 && Number(val[0]) < 1) val = "";
-
-            // 1st n cant b > 1 in 4 digit format, must b len 3
-            if (val.length === 1 && Number(val[0]) > 1) maxLen = 3;
-
-            // 2nd n cant b > 2 in 4 digit format, must b len 3
-            if (val.length === 2 && maxLen === 4 && Number(val[1]) > 2) maxLen = 3;
-
-            // if maxLen 3 disallow 2nd char (min 10s) 2 b > 5
-            if (val.length === 2 && maxLen === 3 && Number(val[1]) > 5) val = val.slice(0, 1);
-            
-            // 3rd n (min 10s) cant b > 5 in 4 digit format, must b len 3
-            if (val.length === 3 && maxLen === 4 && Number(val[2]) > 5) maxLen = 3;
-            // disallow input > maxLen
-            if (val.length > maxLen) val = val.slice(0, maxLen);
+            val = val.replace(/\D/g, ""); // remove all non number chars
+            if (val.length === 1 && Number(val[0]) < 1) val = ""; // prevent 0 as 1st digit
+            if (val.length === 1 && Number(val[0]) > 1) setMaxLen(3); // 1st n cant b > 1 in 4 digit format, must b len 3
+            if (val.length === 2 && maxLen === 4 && Number(val[1]) > 2) setMaxLen(3); // 2nd n cant b > 2 in 4 digit format, must b len 3
+            if (val.length === 2 && maxLen === 3 && Number(val[1]) > 5) val = val.slice(0, 1); // if maxLen 3 disallow 2nd char (min 10s) 2 b > 5
+            if (val.length === 3 && maxLen === 4 && Number(val[2]) > 5) setMaxLen(3); // 3rd n (min 10s) cant b > 5 in 4 digit format, must b len 3
+            if (val.length > maxLen) val = val.slice(0, maxLen); // disallow input > maxLen
             console.log("maxLen: ", maxLen, "val: ", val);
             setText(val);
         };
