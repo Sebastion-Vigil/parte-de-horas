@@ -11,7 +11,6 @@ const Cell = ({ value, onChange, amPm, toggle, placeholder }) => {
     }, [value]);
     if (mode === 'edit') { 
         const handleInputChange = (e) => { // live user input event handler
-            // console.log('Cell: handleInputChange: ', e.target.value)
             let val = e.target.value;
             let updatedLen = maxLen;
             console.log('init maxLen: ', maxLen);
