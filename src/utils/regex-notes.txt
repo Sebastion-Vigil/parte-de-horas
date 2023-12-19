@@ -1,0 +1,17 @@
+// Self-guided regex study
+// https://www.w3schools.com/jsref/jsref_obj_regexp.asp
+// https://regexkit.com/javascript-regex
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
+// need to build regex expression that allows only chars "0-9" AND ":"
+// JavaScript RexExp Object
+  // * A regular expression is a pattern of characters.
+  // * The pattern is used for searching and replacing characters in strings.
+  // * The RegExp Object is a regular expression with added Properties and Methods.
+  // Syntax:
+    // /pattern/modifier(s);
+
+// try: /[^0123456789:]/g
+// let input = '12abcdefghijklmmnpopdoopty:30';
+// input = input.replace(/[^0123456789:]/g, "");
+// input === '12:30'
+// works but now need 2 rework event intercept logic

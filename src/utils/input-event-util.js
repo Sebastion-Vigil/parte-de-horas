@@ -22,3 +22,6 @@ function interceptInputEvent(input, newMaxLen) {
 }
 
 module.exports = { interceptInputEvent };
+
+// "abcd12:30".replace(/[^0-9]+/g, "");
+// returns "1230"
