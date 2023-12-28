@@ -24,6 +24,8 @@ function interceptInputEvent(input, newMaxLen) {
     // disallow input 2 B > newMaxLen
     if (input.length > newMaxLen) input = input.slice(0, newMaxLen);
     
+    // pseudo logic 4 inserting colon between hrs & mins
+    // :-) -> look 4 edge cases 
     // if (input.length === 3)
         // interpolate ":" between index 0 & 1
     // else if (input.length === 4)

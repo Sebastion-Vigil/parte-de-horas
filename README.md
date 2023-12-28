@@ -13,9 +13,13 @@
    * _outputs standard time back to user_
 
 ## TODO
+ - Calculate hrs worked in DaySum
+   * _See Brainstorm notes regarding this below_
  - Sanitize input 
-   * Make a single f() that handles all possible edge cases
+   * ~~Make a single f() that handles all possible edge cases~~
+   * _keep peepin' game for ze bugz yo_
  - Splice & dice 2 make h/m vars & interpolate ":" between
+   * _gonna skip 4 now & move on to calculating hrs worked in DaySum_
  - In DaySum.js, make date and total Cells their own module and import
 
 ### Component Heirarchy
@@ -25,6 +29,9 @@
   - --------3 Cell
 
 ### Brainstorm
+  - Found regex pattern allowing "0-9" and 0-1 ":"
+    * _currently using JS regex method .replace()_
+    * _explore & experiment w/other JS regex methods_
   - Input str length min 3 max 4
     * Checks for input len < 3 && > 4 in place
     * How 2 handle invalid input, e.g., 1300, 3300, 2400?
