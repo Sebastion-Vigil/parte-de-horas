@@ -7,6 +7,10 @@ const DaySum = () => {
     const [valPlaceholders] = useState(['8:00', '12:00', '1:00', '5:00'])
     const [amPm, setAmPm] = useState(['AM', 'PM', 'PM', 'PM'])
     const [date, setDate] = useState('mm-dd-yyyy')
+    const [dayStart, setDayStart] = useState(0);
+    const [lunchStart, setLunchStart] = useState(0);
+    const [lunchEnd, setLunchEnd] = useState(0);
+    const [dayEnd, setDayEnd] = useState(0);
     const handleDateChange = (value) => {
         setDate(value);
     }

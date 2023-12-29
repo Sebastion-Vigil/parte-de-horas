@@ -40,12 +40,11 @@
         - 2nd char only be 0-2
   - Check which of AM/PM user selected?
   - New State/Vars needed in DaySum.js
-    * DayStart
-    * DayEnd
-    * LunchStart
-    * LunchEnd
-    * LunchEnd
-    * DayTotal
+    * ~~DayStart~~
+    * ~~DayEnd~~
+    * ~~LunchStart~~
+    * ~~LunchEnd~~
+    * ~~DayTotal~~
   - Other Edge Cases
     * Day/Lunch start time must be earlier than respective end time
     * Ensure congruency of AM/PM selection
