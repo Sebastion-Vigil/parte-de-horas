@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 import Cell from './Cell.js';
 
 const DaySum = () => {
-    const [vals, setVals] = useState(['', '', '', ''])
+    const [vals, setVals] = useState(['', '', '', '']) // umm...these ARE dayStart, lunchStart, etc...
     const [valPlaceholders] = useState(['8:00', '12:00', '1:00', '5:00'])
     const [amPm, setAmPm] = useState(['AM', 'PM', 'PM', 'PM'])
     const [date, setDate] = useState('mm-dd-yyyy')
-    const [dayStart, setDayStart] = useState(0);
+    const [dayStart, setDayStart] = useState(0); // mebbe no needy -> rethinky
     const [lunchStart, setLunchStart] = useState(0);
     const [lunchEnd, setLunchEnd] = useState(0);
     const [dayEnd, setDayEnd] = useState(0);

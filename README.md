@@ -15,6 +15,8 @@
 ## TODO
  - Calculate hrs worked in DaySum
    * _See Brainstorm notes regarding this below_
+ - Make button that calcs & displays biweekly total when clicked
+   * Not certain but likely to go in Timesheet
  - Sanitize input 
    * ~~Make a single f() that handles all possible edge cases~~
    * _keep peepin' game for ze bugz yo_
@@ -29,7 +31,8 @@
   - --------3 Cell
 
 ### Brainstorm
-  - Found regex pattern allowing "0-9" and 0-1 ":"
+  - Now have regex pattern that allows chars "0-9" and ":"
+    * wonky as all Sam Hill; need 2 refine
     * _currently using JS regex method .replace()_
     * _explore & experiment w/other JS regex methods_
   - Input str length min 3 max 4

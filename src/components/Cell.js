@@ -5,18 +5,17 @@ import { interceptInputEvent } from '../utils/input-event-util';
 const Cell = ({ value, onChange, amPm, toggle, placeholder }) => {
     const [mode, setMode] = useState('read');
     const [text, setText] = useState(value ?? '');
-    let [maxLen] = useState(4);
     useEffect(() => {
         setText(value);
     }, [value]);
     if (mode === 'edit') { 
         const handleInputChange = (e) => { // live user input event handler
-            let val = e.target.value;
-            let updatedLen = maxLen;
-            console.log('init maxLen: ', maxLen);
-            let interceptedInput = interceptInputEvent(val, updatedLen);
+            let val = e.target.value; // mutable store for input event
+            let updatedLen = 4; // default val before passing 2 intercept f()
+            console.log('init maxLen: ', updatedLen);
+            let interceptedInput = interceptInputEvent(val, updatedLen); // returns [v, len]
             console.log("maxLen: ", interceptedInput[1], "val: ", interceptedInput[0]);
-            setText(interceptedInput[0]);
+            setText(interceptedInput[0]); // mebbe no needy [v, len] since only using len for console.log()???
         };
         const handleSaveClick = () => {
             setMode('read');
@@ -71,8 +70,7 @@ export default Cell;
 //   -> input len < 3
 //   -> invalid time formats, e.g., 13:00, 30:00, 12:60, 1:70
 // works but needs improvement:
-//   -> fugly boolean line of code
-//   -> prefer to not use alert (handleSaveClick alert still ok, for now)
+//   -> fugly boolean line of code // :-) -> but now
 //   -> user input completely reset; y not only strip offending char?
 // ideas:
 //   -> Disallow 0 as 1st char
