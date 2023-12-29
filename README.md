@@ -23,6 +23,9 @@
  - Splice & dice 2 make h/m vars & interpolate ":" between
    * _gonna skip 4 now & move on to calculating hrs worked in DaySum_
  - In DaySum.js, make date and total Cells their own module and import
+   * _3 separate cell-type components ok @ 1st_
+   * _refactor to single adjustable cell component in future, if possible_
+ - Start tinkering/pseudocoding/planning backend (MongoDB)
 
 ### Component Heirarchy
   - --0 Timesheet

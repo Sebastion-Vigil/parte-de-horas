@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Cell from './Cell.js';
+
+// daySumVal = dayEnd - dayStart - (lunchEnd - lunchStart)
 
 const DaySum = () => {
     const [vals, setVals] = useState(['', '', '', '']) // dayStart | lunchStart | lunchEnd | dayEnd
@@ -10,16 +12,16 @@ const DaySum = () => {
     const handleDateChange = (v) => {
         setDate(v);
     } // will I need useEffect?
-    // useEffect(() => {
-    //     console.log('vals: ', vals);
-    // }, [vals])
+    useEffect(() => {
+        console.log('useEffect vals: ', vals);
+    }, [vals])
     return (
         <div className='day-summary-row flx-rw-evn-cnt'>
             <Cell value={date} onChange={handleDateChange} />
             {
                 vals.map((value, index) => {
                     const handleChange = value => {
-                        console.log("DaySum vals: ", vals)
+                        // console.log("DaySum vals: ", vals)
                         setVals(vals.map((v,i) => index === i ? value : v));
                     }
                     const xM = amPm[index]
