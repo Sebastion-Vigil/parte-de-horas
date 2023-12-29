@@ -14,7 +14,7 @@
 
 ## TODO
  - Calculate hrs worked in DaySum
-   * _See Brainstorm notes regarding this below_
+   * _should perform calculation automatically as fields are filled in?_
  - Make button that calcs & displays biweekly total when clicked
    * Not certain but likely to go in Timesheet
  - Sanitize input 
@@ -35,14 +35,12 @@
     * wonky as all Sam Hill; need 2 refine
     * _currently using JS regex method .replace()_
     * _explore & experiment w/other JS regex methods_
-  - Input str length min 3 max 4
-    * Checks for input len < 3 && > 4 in place
-    * How 2 handle invalid input, e.g., 1300, 3300, 2400?
-      - if input str len 4
-        - 1st char can only be 0-1
-        - 2nd char only be 0-2
   - Check which of AM/PM user selected?
+    * _need for converting to military time_
   - New State/Vars needed in DaySum.js
+    * vals arr, i.e., ['', '', '', ''], is what we working with
+      - need 2 console.log() & tinker
+      - if undefined, assign 0 to tmp var
     * ~~DayStart~~
     * ~~DayEnd~~
     * ~~LunchStart~~

@@ -3,17 +3,13 @@ import React, { useState } from 'react';
 import Cell from './Cell.js';
 
 const DaySum = () => {
-    const [vals, setVals] = useState(['', '', '', '']) // umm...these ARE dayStart, lunchStart, etc...
+    const [vals, setVals] = useState(['', '', '', '']) // dayStart | lunchStart | lunchEnd | dayEnd
     const [valPlaceholders] = useState(['8:00', '12:00', '1:00', '5:00'])
     const [amPm, setAmPm] = useState(['AM', 'PM', 'PM', 'PM'])
     const [date, setDate] = useState('mm-dd-yyyy')
-    const [dayStart, setDayStart] = useState(0); // mebbe no needy -> rethinky
-    const [lunchStart, setLunchStart] = useState(0);
-    const [lunchEnd, setLunchEnd] = useState(0);
-    const [dayEnd, setDayEnd] = useState(0);
-    const handleDateChange = (value) => {
-        setDate(value);
-    }
+    const handleDateChange = (v) => {
+        setDate(v);
+    } // will I need useEffect?
     // useEffect(() => {
     //     console.log('vals: ', vals);
     // }, [vals])
@@ -23,7 +19,7 @@ const DaySum = () => {
             {
                 vals.map((value, index) => {
                     const handleChange = value => {
-                        // console.log("DaySum handleChange: ", value)
+                        console.log("DaySum vals: ", vals)
                         setVals(vals.map((v,i) => index === i ? value : v));
                     }
                     const xM = amPm[index]
@@ -53,4 +49,4 @@ const DaySum = () => {
 
 export default DaySum;
 
-// And all logic for calculating total hrs worked on a given day will go here
+// All logic for calculating total hrs worked on a given day will go here
