@@ -18,6 +18,23 @@ const DaySum = () => {
         const calcDayTotal = () => {
             vals.forEach((v) => {
                 if (v) console.log('truthy!: ', v);
+                // Time Point: dayStart lunchStart lunchEnd dayEnd
+                //      Index:    0         1          2       3
+                ////////////////////////// TEST CASES /////////////
+                //                ''        ''         ''      '' 
+                //              8:00        ''         ''      ''
+                //                ''      12:00        ''      ''
+                //                ''        ''        1:00     ''
+                //                ''        ''         ''     5:00
+                //                ''        ''        1:00     ''
+                //                ''      12:00        ''      ''
+                //              8:00        ''         ''      ''
+                //              8:00      12:00       1:00    5:00
+                //              8:00      12:00        ''     5:00
+                //              8:00        ''        1:00    5:00
+                //                ''      12:00        ''     5:00
+                //                ''      12:00       5:00     '' 
+                // assume complete input (all 4 cells) @ 1st 2 wrap head around
             });
             console.log('vals: ', vals);
         }
