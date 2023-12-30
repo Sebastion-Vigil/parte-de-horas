@@ -68,6 +68,7 @@
       - Alert/inform user forgetting to clock back in from lunch
 
 ### Helpful links
+  - https://overreacted.io/a-complete-guide-to-useeffect/
   - https://dirask.com/posts/React-editable-table-cell-after-mouse-click-DWeBEj
   - https://dirask.com/posts/React-change-state-from-props-functional-component-prKRbj
   - https://dirask.com/posts/React-create-dynamic-editable-table-DNKArp

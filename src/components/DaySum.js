@@ -12,8 +12,16 @@ const DaySum = () => {
     const handleDateChange = (v) => {
         setDate(v);
     } // will I need useEffect? yes indeedy->most recent state accessible here yo!
+    
     useEffect(() => {
-        console.log('useEffect vals: ', vals);
+        const calcDayTotal = () => {
+            vals.forEach((v) => {
+                if (v) console.log('truthy!: ', v);
+            });
+            console.log('vals: ', vals);
+        }
+        calcDayTotal();
+        // console.log('useEffect vals: ', vals);
     }, [vals])
     return (
         <div className='day-summary-row flx-rw-evn-cnt'>
