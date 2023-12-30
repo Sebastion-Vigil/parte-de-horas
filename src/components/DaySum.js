@@ -9,6 +9,7 @@ const DaySum = () => {
     const [valPlaceholders] = useState(['8:00', '12:00', '1:00', '5:00'])
     const [amPm, setAmPm] = useState(['AM', 'PM', 'PM', 'PM'])
     const [date, setDate] = useState('mm-dd-yyyy')
+    const [dayTotal, setDayTotal] = useState(0); // dont forget ur dealing with an int
     const handleDateChange = (v) => {
         setDate(v);
     } // will I need useEffect? yes indeedy->most recent state accessible here yo!
