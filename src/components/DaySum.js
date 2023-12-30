@@ -11,7 +11,7 @@ const DaySum = () => {
     const [date, setDate] = useState('mm-dd-yyyy')
     const handleDateChange = (v) => {
         setDate(v);
-    } // will I need useEffect?
+    } // will I need useEffect? yes indeedy->most recent state accessible here yo!
     useEffect(() => {
         console.log('useEffect vals: ', vals);
     }, [vals])

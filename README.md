@@ -15,6 +15,14 @@
 ## TODO
  - Calculate hrs worked in DaySum
    * _should perform calculation automatically as fields are filled in?_
+   * need f() that uses vals arr
+     - likely best put in useEffect
+       * console.log in useEffect correctly displays most recent state
+     - 0 = dayStart
+     - 1 = lunchStart
+     - 2 = lunchEnd
+     - 3 = dayEnd
+     - need a day total var in DaySum
  - Make button that calcs & displays biweekly total when clicked
    * Not certain but likely to go in Timesheet
  - Sanitize input 
