@@ -1,5 +1,6 @@
 # React Timesheet App
-
+ - DO NOT PUSH TO GITHUB 'TILL NEW YEAR'S DAY, YA HEARD?
+ - DO NOT EVEN COMMIT LOCALLY YO!
 ## MVP
  - To be a complete MERN app when finished
  - User will be able to register & create account
@@ -25,6 +26,7 @@
      - need a day total var in DaySum
  - Make button that calcs & displays biweekly total when clicked
    * Not certain but likely to go in Timesheet
+   * 2nd guessing this; perhaps go w/auto display all the way
  - Sanitize input 
    * ~~Make a single f() that handles all possible edge cases~~
    * _keep peepin' game for ze bugz yo_
@@ -68,6 +70,7 @@
       - Alert/inform user forgetting to clock back in from lunch
 
 ### Helpful links
+  - https://stackoverflow.com/questions/33383840/is-there-a-javascript-equivalent-of-the-python-pass-statement-that-does-nothing#33383865
   - https://overreacted.io/a-complete-guide-to-useeffect/
   - https://dirask.com/posts/React-editable-table-cell-after-mouse-click-DWeBEj
   - https://dirask.com/posts/React-change-state-from-props-functional-component-prKRbj
