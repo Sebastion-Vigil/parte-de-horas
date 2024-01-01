@@ -12,9 +12,9 @@ const Cell = ({ value, onChange, amPm, toggle, placeholder }) => {
         const handleInputChange = (e) => { // live user input event handler
             let val = e.target.value; // mutable store for input event
             let updatedLen = 4; // default val before passing 2 intercept f()
-            console.log('init maxLen: ', updatedLen);
+            // console.log('init maxLen: ', updatedLen);
             let interceptedInput = interceptInputEvent(val, updatedLen); // returns [v, len]
-            console.log("maxLen: ", interceptedInput[1], "val: ", interceptedInput[0]);
+            // console.log("maxLen: ", interceptedInput[1], "val: ", interceptedInput[0]);
             setText(interceptedInput[0]); // mebbe no needy [v, len] since only using len for console.log()???
         };
         const handleSaveClick = () => {
@@ -63,32 +63,3 @@ const Cell = ({ value, onChange, amPm, toggle, placeholder }) => {
 };
 
 export default Cell;
-
-
-// working checks in place thus far:
-//   -> input len > 4 (the only check in handleSaveClick)
-//   -> input len < 3
-//   -> invalid time formats, e.g., 13:00, 30:00, 12:60, 1:70
-// works but needs improvement:
-//   -> fugly boolean line of code // :-) -> but now
-//   -> user input completely reset; y not only strip offending char?
-// ideas:
-//   -> Disallow 0 as 1st char
-//   -> determine early on whether input len 3 or 4
-//      -> input must be 2 digits long to determine max len
-//   -> easier to immediately strip invalid input on the spot
-//   -> if max len 4:
-//      -> 1st char cannot be > 1
-//      -> 2nd char cannot be > 2
-//      -> 3rd char (min 10s) cannot be > 5
-//      -> 4th char can be 1-9
-//   -> if max len 3:
-//      -> 1st char can be 1-9
-//      -> 2nd char (min 10s) cannot be > 5
-//      -> 3rd char can be 1-9
-//   -> Determine max len of input str:
-//      -> 1st char determines max len
-//      -> if 1st char > 1:
-//         -> max len 3
-//      -> else:
-//         -> max len 4
