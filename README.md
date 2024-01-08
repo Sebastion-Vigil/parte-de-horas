@@ -12,8 +12,10 @@
    * _outputs standard time back to user_
 
 ## TODO
- - Splice & dice 2 make h/m vars & interpolate ":" between
+ - ~~Splice & dice 2 interpolate ":" between~~
+   * will keep peepin game, but no bugz found as of yet
    * _necessary before DaySum calc to avoid having to restructure f()s in time-util_
+   * now time 2 import conversion f()s & calculate yo!
  - Calculate hrs worked in DaySum
    * _should perform calculation automatically as fields are filled in?_
    * need f() that uses vals arr
