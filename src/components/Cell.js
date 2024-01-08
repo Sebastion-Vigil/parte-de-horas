@@ -11,19 +11,16 @@ const Cell = ({ value, onChange, amPm, toggle, placeholder }) => {
     if (mode === 'edit') { 
         const handleInputChange = (e) => { // live user input event handler
             let val = e.target.value; // mutable store for input event
-            let updatedLen = 4; // default val before passing 2 intercept f()
-            // console.log('init maxLen: ', updatedLen);
-            let interceptedInput = interceptInputEvent(val, updatedLen); // returns [v, len]
-            // console.log("maxLen: ", interceptedInput[1], "val: ", interceptedInput[0]);
-            setText(interceptedInput[0]); // mebbe no needy [v, len] since only using len for console.log()???
+            let interceptedInput = interceptInputEvent(val);
+            setText(interceptedInput);
         };
         const handleSaveClick = () => {
-            setMode('read');
+            setMode('read'); // restructure & avoid using alert()
             if (onChange) {
                 // console.log(text)
                 if (text.length < 3) { // check for input < 3
                     alert(
-                        "Minimum 3-4 digits long, e.g., 12:30 or 7:47."
+                        "Minimum 3-4 digits long, e.g., 7:47 or 12:34."
                     );
                     return;
                 }

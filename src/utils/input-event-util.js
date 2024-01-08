@@ -1,30 +1,30 @@
 // comments w/ " :-) -> " are for Testing & Experimenting, 4 bugs & changes, if needed
-
+// function foo() vs const foo = () => differences/pros/cons 4 each???
 // live user input event handler
-function interceptInputEvent(input, newMaxLen) {
-
+function interceptInputEvent(input) {
+    let maxLen = 4;
     // remove all non number chars
     input = input.replace(/\D/g, ""); 
     
     // prvnt 0 as 1st dgt
     if (Number(input[0]) < 1) input = input.slice(1, input.length); // :-) ->  remove "1" frm "10:00" & C ? happns
 
-    // 1st num cn't B > 1 !(23:44) in 4-digit-frmt; newMaxLen must B 3
-    if (Number(input[0]) > 1) newMaxLen = 3;
+    // 1st num cn't B > 1 !(23:44) in 4-digit-frmt; maxLen must B 3
+    if (Number(input[0]) > 1) maxLen = 3;
 
-    // 2nd num cn't B > 2 !(13:45) in 4-digit-frmt; newMaxLen must B 3
-    if (Number(input[1]) > 2 && newMaxLen === 4) newMaxLen = 3;
+    // 2nd num cn't B > 2 !(13:45) in 4-digit-frmt; maxLen must B 3
+    if (Number(input[1]) > 2 && maxLen === 4) maxLen = 3;
 
     // 2nd num cn't B > 5 !(16:45, 2:65) in either digit-frmt
-    if (Number(input[1]) > 5 && (newMaxLen === 3 || newMaxLen === 4)) input = input.slice(0, 1); // :-) -> look 4 edge cases
+    if (Number(input[1]) > 5 && (maxLen === 3 || maxLen === 4)) input = input.slice(0, 1); // :-) -> look 4 edge cases
 
-    // 3rd num cn't B > 5 !(12:73) in 4-digit-frmt; newMaxLen must B 3
-    if (Number(input[2]) > 5 && newMaxLen === 4) newMaxLen = 3;
+    // 3rd num cn't B > 5 !(12:73) in 4-digit-frmt; maxLen must B 3
+    if (Number(input[2]) > 5 && maxLen === 4) maxLen = 3;
     
-    // disallow input 2 B > newMaxLen
-    if (input.length > newMaxLen) input = input.slice(0, newMaxLen);
+    // disallow input 2 B > maxLen
+    if (input.length > maxLen) input = input.slice(0, maxLen);
 
-    // tentatively testing interpolation of ":", i.e., `${h}:${m}`
+    // insert a ":" 
     if (input.length >= 2 && !input.includes(':')) {
       input = input.split('');
       input.splice(-2, 0, ':')
@@ -32,7 +32,7 @@ function interceptInputEvent(input, newMaxLen) {
     }
     
     
-    return [input, newMaxLen];
+    return input;
 }
 
 module.exports = { interceptInputEvent };
