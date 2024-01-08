@@ -15,7 +15,7 @@ const DaySum = () => {
     }
     
     useEffect(() => {
-        const tookLunch = () => {
+        const calcDayTotal = () => {
             if (vals.length === 4) { // assuming proper input/timepoint congruency 4 now 
                 const dayStart = Number(vals[0]);
                 const lunchStart = Number(vals[1]);
@@ -28,7 +28,7 @@ const DaySum = () => {
                 console.log('dayTotal: ', daySummaryTotal);
             }
         }
-        tookLunch();
+        calcDayTotal();
     }, [vals])
     return (
         <div className='day-summary-row flx-rw-evn-cnt'>

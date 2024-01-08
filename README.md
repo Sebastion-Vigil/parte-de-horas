@@ -1,6 +1,4 @@
 # React Timesheet App
- - DO NOT PUSH TO GITHUB 'TILL NEW YEAR'S DAY, YA HEARD?
- - DO NOT EVEN COMMIT LOCALLY YO!
 ## MVP
  - To be a complete MERN app when finished
  - User will be able to register & create account
@@ -14,6 +12,8 @@
    * _outputs standard time back to user_
 
 ## TODO
+ - Splice & dice 2 make h/m vars & interpolate ":" between
+   * _necessary before DaySum calc to avoid having to restructure f()s in time-util_
  - Calculate hrs worked in DaySum
    * _should perform calculation automatically as fields are filled in?_
    * need f() that uses vals arr
@@ -30,8 +30,6 @@
  - Sanitize input 
    * ~~Make a single f() that handles all possible edge cases~~
    * _keep peepin' game for ze bugz yo_
- - Splice & dice 2 make h/m vars & interpolate ":" between
-   * _gonna skip 4 now & move on to calculating hrs worked in DaySum_
  - In DaySum.js, make date and total Cells their own module and import
    * _3 separate cell-type components ok @ 1st_
    * _refactor to single adjustable cell component in future, if possible_
@@ -70,6 +68,9 @@
       - Alert/inform user forgetting to clock back in from lunch
 
 ### Helpful links
+  - https://stackoverflow.com/questions/5570820/regex-allow-digits-and-a-single-dot
+  - https://regexr.com/
+  - https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
   - https://stackoverflow.com/questions/33383840/is-there-a-javascript-equivalent-of-the-python-pass-statement-that-does-nothing#33383865
   - https://overreacted.io/a-complete-guide-to-useeffect/
   - https://dirask.com/posts/React-editable-table-cell-after-mouse-click-DWeBEj

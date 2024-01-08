@@ -20,24 +20,22 @@ function interceptInputEvent(input, newMaxLen) {
 
     // 3rd num cn't B > 5 !(12:73) in 4-digit-frmt; newMaxLen must B 3
     if (Number(input[2]) > 5 && newMaxLen === 4) newMaxLen = 3;
-
+    
     // disallow input 2 B > newMaxLen
     if (input.length > newMaxLen) input = input.slice(0, newMaxLen);
+
+    // tentatively testing interpolation of ":", i.e., `${h}:${m}`
+    if (input.length >= 2 && !input.includes(':')) {
+      input = input.split('');
+      input.splice(-2, 0, ':')
+      input = input.join('')        
+    }
     
-    // pseudo logic 4 inserting colon between hrs & mins
-    // :-) -> look 4 edge cases 
-    // if (input.length === 3)
-        // interpolate ":" between index 0 & 1
-    // else if (input.length === 4)
-        // interpolate ":" between index 1 & 2
     
     return [input, newMaxLen];
 }
 
 module.exports = { interceptInputEvent };
-
-// gonna have to rework this to allow ":"
-// or think where/how else interpolate when answer ready
 
 // https://stackoverflow.com/questions/15361189/how-to-select-all-other-values-in-an-array-except-the-ith-element#15361261
 // https://stackoverflow.com/questions/59264119/how-do-i-interpolate-the-value-in-certain-data-point-by-array-of-known-points

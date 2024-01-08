@@ -1,6 +1,4 @@
 // at present these f()s wont work as is; need 2 change 
-// do I even need the conversion? just a thought...
-// TEST AND DEVELOP, TEST AND DEVELOP, DUM SPIRO SPERO
 function militaryToStandard(mt) { // e.g. -> '14:30'
   let [h, m] = mt.split(":");
   h = Number(h)
@@ -10,7 +8,6 @@ function militaryToStandard(mt) { // e.g. -> '14:30'
   if (h > 12) return `${h - 12}:${m}PM`;
 }
 
-// dum spiro spero; nam et ipsa scientia potestas est, carpe diem!!!!
 function standardToMilitary(st) { // e.g. -> '9:30:PM' ||'9:30:AM'
   let [h, m, xM] = st.split(":")
   h = Number(h)
