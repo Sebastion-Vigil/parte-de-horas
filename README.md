@@ -70,6 +70,7 @@
       - Alert/inform user forgetting to clock back in from lunch
 
 ### Helpful links
+### f you want to convert standard time to military time, add 1200 to any time from 1:00pm to 11:00pm.
   - https://stackoverflow.com/questions/5570820/regex-allow-digits-and-a-single-dot
   - https://regexr.com/
   - https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
