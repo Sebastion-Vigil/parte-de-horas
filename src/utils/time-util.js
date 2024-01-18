@@ -29,8 +29,8 @@ function standardToMilitary(input) {
 function test() {
   let input1 = '12:30:AM';
   let input2 = '12:30:PM';
-  let input3 = '3:30:AM';
-  let input4 = '3:30:PM';
+  let input3 = '11:11:AM';
+  let input4 = '11:11:PM';
   var standardMilitaryConversion1 = standardToMilitary(input1);
   var standardMilitaryConversion2 = standardToMilitary(input2);
   var standardMilitaryConversion3 = standardToMilitary(input3);
