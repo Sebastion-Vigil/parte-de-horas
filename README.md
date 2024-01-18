@@ -25,6 +25,8 @@
      - 1 = lunchStart
      - 2 = lunchEnd
      - 3 = dayEnd
+       * dayTotal = dayEnd - dayStart - (lunchEnd - lunchStart)
+
      - need a day total var in DaySum
  - Make button that calcs & displays biweekly total when clicked
    * Not certain but likely to go in Timesheet
@@ -83,3 +85,18 @@
   - https://stackoverflow.com/questions/42083181/is-it-possible-to-return-empty-in-react-render-function
   - https://bobbyhadz.com/blog/react-enter-key-submit-form
   - https://react.dev/reference/react-dom/components/input
+
+
+### Conversion Pseudocode
+Problem Statement:
+
+Given a time in the 12-hour AM/PM format (hh:mm:ssAM or hh:mm:ssPM), we need to convert it to the military (24-hour) time format.
+Algorithmic Approach:
+
+To solve the “Time Conversion” problem, we can follow the following algorithmic approach:
+
+    Parse the input time string to extract the hours, minutes, seconds, and the AM/PM indicator.
+    If the time is in the AM period and the hours are 12, set the hours to 0 to represent midnight.
+    If the time is in the PM period and the hours are not 12, add 12 to the hours to convert it to the 24-hour format.
+    Convert the hours, minutes, and seconds to strings and pad them with leading zeros if necessary.
+    Concatenate the converted hours, minutes, and seconds, separated by colons, to form the military time string.

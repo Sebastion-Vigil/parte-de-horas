@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { militaryToStandard, standardToMilitary } from '../utils/time-util.js';
 import Cell from './Cell.js';
 
-// dayTotal = dayEnd - dayStart - (lunchEnd - lunchStart)
-
 const DaySum = () => {
     const [vals, setVals] = useState(['', '', '', '']) // dayStart | lunchStart | lunchEnd | dayEnd
     const [valPlaceholders] = useState(['8:00', '12:00', '1:00', '5:00'])
@@ -13,17 +11,20 @@ const DaySum = () => {
     const handleDateChange = (v) => {
         setDate(v);
     }
-    
+
     useEffect(() => {
-        
+
         const calcDayTotal = () => {
             // gotta make '9:30:PM' || '12:30:AM'
-           const dayStart = standardToMilitary(vals[0] + ':' + amPm[0]);
-           const lunchStart = standardToMilitary(vals[1] + ':' + amPm[1]);
-           const lunchEnd = standardToMilitary(vals[2] + ':' + amPm[2]);
-           const dayEnd = standardToMilitary(vals[3] + ':' + amPm[3]);
-           console.log('dayStart: ', dayStart,'lunchStart: ', lunchStart,'lunchEnd: ',  lunchEnd,'dayEnd: ',  dayEnd);
-           console.log('dayStart: ,', dayStart)
+            // dayTotal = dayEnd - dayStart - (lunchEnd - lunchStart)
+            const dayStart = standardToMilitary(vals[0] + ':' + amPm[0]);
+            const lunchStart = standardToMilitary(vals[1] + ':' + amPm[1]);
+            const lunchEnd = standardToMilitary(vals[2] + ':' + amPm[2]);
+            const dayEnd = standardToMilitary(vals[3] + ':' + amPm[3]);
+            // well duh! me problem was trying 2 do math w/":" in string, returning NaN
+            console.log('dayStart: ', dayStart, 'lunchStart: ', lunchStart, 'lunchEnd: ', lunchEnd, 'dayEnd: ', dayEnd);
+            console.log('respective types: ', typeof dayStart, typeof lunchStart, typeof lunchEnd, typeof dayEnd);
+            
         }
         calcDayTotal();
     }, [vals])
@@ -33,7 +34,7 @@ const DaySum = () => {
             {
                 vals.map((value, index) => {
                     const handleChange = value => {
-                        setVals(vals.map((v,i) => index === i ? value : v));
+                        setVals(vals.map((v, i) => index === i ? value : v));
                     }
                     const xM = amPm[index]
                     const toggleAmPm = () => {
@@ -44,13 +45,13 @@ const DaySum = () => {
                     }
                     const valPlaceholder = valPlaceholders[index];
                     return (
-                        <Cell 
-                        key={index} 
-                        value={value} 
-                        onChange={handleChange} 
-                        amPm={xM} 
-                        toggle={toggleAmPm} 
-                        placeholder={valPlaceholder} 
+                        <Cell
+                            key={index}
+                            value={value}
+                            onChange={handleChange}
+                            amPm={xM}
+                            toggle={toggleAmPm}
+                            placeholder={valPlaceholder}
                         />
                     )
                 })
@@ -64,10 +65,10 @@ export default DaySum;
 
 // All logic for calculating total hrs worked on a given day will go here
 // rough logic:
-            // clock in: (
-            // clock out: )
-            // total starts @ 0
-            // wait for dayStart OR lunchStart
-            // then wait for dayEnd OR lunchEnd
-            // then subtract start from end
-            // if no clock-ins OR no clock-outs, then we know cannot calc total
+// clock in: (
+// clock out: )
+// total starts @ 0
+// wait for dayStart OR lunchStart
+// then wait for dayEnd OR lunchEnd
+// then subtract start from end
+// if no clock-ins OR no clock-outs, then we know cannot calc total
