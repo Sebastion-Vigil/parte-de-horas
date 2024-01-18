@@ -11,21 +11,35 @@ function militaryToStandard(mt) {
   if (h > 12) return `${h - 12}:${m}PM`;
 }
 // e.g. -> '9:30:PM' ||'9:30:AM'
-function standardToMilitary(st) {
-  let [h, m, xM] = st.split(":");
-  if (xM === 'AM') return `${h}:${m}`;
-  if (xM === 'PM' && (h === '12')) return `${h}:${m}`;
-  if (xM === 'PM' && (h !== '12')) return `${Number(h) + 12}:${m}`;
+// function standardToMilitary(st) {
+//   let [h, m, xM] = st.split(":");
+//   if (xM === 'AM') return `${h}:${m}`;
+//   if (xM === 'PM' && (h === '12')) return `${h}:${m}`;
+//   if (xM === 'PM' && (h !== '12')) return `${Number(h) + 12}:${m}`;
+// }
+
+function standardToMilitary(input) {
+  let [h, m, xM] = input.split(":");
+  if (xM === 'AM' && h === '12') return `${'00'}:${m}`;
+  if (xM === 'AM' && h !== '12') return `${h}:${m}`;
+  if (xM === 'PM' && h === '12') return `${h}:${m}`;
+  if (xM === 'PM' && h !== '12') return `${Number(h) + 12}:${m}`
 }
 
 function test() {
   let input1 = '12:30:AM';
   let input2 = '12:30:PM';
+  let input3 = '3:30:AM';
+  let input4 = '3:30:PM';
   var standardMilitaryConversion1 = standardToMilitary(input1);
   var standardMilitaryConversion2 = standardToMilitary(input2);
+  var standardMilitaryConversion3 = standardToMilitary(input3);
+  var standardMilitaryConversion4 = standardToMilitary(input4);
   // input1 should return '00:30' instead of '12:30' -> fix yo!
   console.log(input1, '=>', standardMilitaryConversion1); // 12:30
   console.log(input2, '=>', standardMilitaryConversion2); // 12:30
+  console.log(input3, '=>', standardMilitaryConversion3);
+  console.log(input4, '=>', standardMilitaryConversion4);
 }
 
 test();
